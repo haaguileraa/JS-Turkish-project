@@ -1,3 +1,4 @@
+
 //////////////-- inicia el escenario
 this.gotoAndStop(1); // se detiene en en el frame 1
 var ldt = this;   //Le asigno this a una variable para no tener errores 
@@ -16,7 +17,6 @@ function leftright(e) {
 	if (e.keyCode == 37) {
 		
 		this.meadow.x -= 10;   //Desplazamos el fondo pradera
-		
 		this.desert.x -= 10;   //Desplazamos el fondo desierto
 		this.horse.x  -= 10;   //Desplazamos el caballo
 		this.camel.x  -= 10;   //Desplazamos el camello
@@ -42,35 +42,32 @@ window.addEventListener("keydown", maxlr.bind(this));
 function maxlr(e){
 	if (e.keyCode == 37 && counter < 0 ){
 		if (confirm("Por favor seleccione si desea seguir leyendo")) {
-		txt = "You pressed OK!";
-		this.meadow.x = -360;   //Desplazamos todo a la posicion inicial
-		this.desert.x = 360;
-		this.horse.x  = -192;  //inicialmente está en 168 (168-360=-192)
-		this.camel.x  = 193;   //inicialmente está en 553 (553-360=193)
-		counter       = 0;	
+			this.meadow.x = -360;   //Desplazamos todo a la posicion inicial
+			this.desert.x = 360;
+			this.horse.x  = -192;  //inicialmente está en 168 (168-360=-192)
+			this.camel.x  = 193;   //inicialmente está en 553 (553-360=193)
+			counter       = 0;	
 		}
 		else{
-		this.meadow.x += 360;   //Desplazamos todo a la posicion inicial
-		this.desert.x += 360;
-		this.horse.x  += 360;
-		this.camel.x  += 360;
-		counter=360; // El contador se reinicia
-		}}
-	else if (e.keyCode == 39 && counter > 720 ){
+			this.meadow.x += 360;   //Desplazamos todo a la posicion inicial
+			this.desert.x += 360;
+			this.horse.x  += 360;
+			this.camel.x  += 360;
+			counter=360; // El contador se reinicia
+		}
+	}else if (e.keyCode == 39 && counter > 720 ){
 		if (confirm("Por favor seleccione si desea seguir leyendo")) {
-		txt = "You pressed OK!";
-		this.meadow.x = 360;   //Desplazamos todo a la posicion inicial
-		this.desert.x = 1080;
-		this.horse.x  = 528;  //inicialmente está en 168 (168+360=528)
-		this.camel.x  = 913;   //inicialmente está en 553 (553+360=913)
-		counter       = 720;	
-		}
-		else{
-		this.meadow.x -= 360;   //Desplazamos todo a la posicion inicial
-		this.desert.x -= 360;
-		this.horse.x  -= 360;
-		this.camel.x  -= 360;
-		counter=360; //El contador se reinicia
+			this.meadow.x = 360;   //Desplazamos todo a la posicion inicial
+			this.desert.x = 1080;
+			this.horse.x  = 528;  //inicialmente está en 168 (168+360=528)
+			this.camel.x  = 913;   //inicialmente está en 553 (553+360=913)
+			counter       = 720;	
+		}else{
+			this.meadow.x -= 360;   //Desplazamos todo a la posicion inicial
+			this.desert.x -= 360;
+			this.horse.x  -= 360;
+			this.camel.x  -= 360;
+			counter=360; //El contador se reinicia
 		}
 	}	
 }
