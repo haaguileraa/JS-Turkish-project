@@ -1,0 +1,431 @@
+@charset "UTF-8";
+
+/*Tipo de fuente*/
+@font-face {
+    font-family: 'Karma-Light';
+    src: url('../fonts/Karma-Light.ttf');
+}
+@font-face {
+    font-family: 'Karma-Bold';
+    src: url('../fonts/Karma-Bold.ttf' );
+}
+@font-face {
+    font-family: 'Karma-SemiBold';
+    src: url('../fonts/Karma-SemiBold.ttf' );
+}
+
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src: url('../fonts/GreatVibes-Regular.ttf' );
+}
+/* Fin de Fuentes*/
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+/*    background-color: gray;*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(../images/istambul.jpg);
+    
+    
+/*    Vh hace referencia a la centésima parte de la altura del viewport*/
+ 
+    height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+header
+{
+    /* NOTA: Repetí lo mismo  del Body debido a que si no lo hago, los botones inferiores no quedan bien acomodados.*/
+    
+    
+/*    Quiero que mi fondo se vea un poco oscuro para que las letras en blanco se aprecien claramente:*/
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(../Images/istambul.jpg);
+    
+    
+/*    Vh hace referencia a la centésima parte de la altura del viewport*/
+ 
+    height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+/* Links */
+a:link {
+	text-decoration: none;
+    color:dodgerblue;
+
+}
+/* Links visitados*/
+a:visited {
+    color: #FFDC00; 
+	text-shadow: 1px 1px #000000;
+}
+
+
+
+/* Títulos primarios*/
+h1 {
+	font-family: 'GreatVibes-Regular';
+	font-size: 3.5em;
+	font-style: normal;
+	color: #993300;
+	text-shadow: 1px 1px #000000;
+	text-align: left;
+	min-width:200px;
+    max-width:840px;
+}
+
+/*PARA EL ARCHIVO turca.html*/
+h4 {
+	font-family: 'GreatVibes-Regular';
+	font-size: 2.5em;
+	font-style: normal;
+	color: #993300;
+	text-shadow: 1px 1px #000000;
+	text-align: left;
+	min-width:200px;
+    max-width:840px;
+}
+
+
+h1 a:visited {
+    color:#993300;
+}
+/* Títulos secundarios*/
+h2 {
+	font-family: 'Karma-Bold';   
+	font-size: 2.5em;
+	font-weight: normal;
+    text-shadow: 0.2px 0.2px #dddddd;
+/*	text-decoration: none;*/
+	margin:0px 0px  2%  10%;
+    text-align: left;
+    max-width: 640px;
+	padding:44px 10px 2px 10px;
+}
+
+
+h3 {
+	font-family: 'Karma-Bold'; 
+    color: white;
+	font-size: 2em;
+	font-weight: normal;
+    text-shadow: 1px 1px red;
+/*	text-decoration: none;*/
+	margin:10px 0px  2%  10%;
+    text-align: left;
+    max-width: 640px;
+	padding:44px 10px 2px 10px;
+}
+
+
+.menunav {
+/*    para ver el menú a la derecha:*/
+    float: right;
+    
+/*    para que no se vean los puntos por defecto:*/
+    list-style: none;
+    
+    margin-top: 30px;
+}
+
+.menunav li {
+/*    Para que se vea en línea horizontal*/
+    display: inline-block;
+}
+
+
+.menunav a {
+    
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Karma-SemiBold", sans-serif;
+    font-size: 0.8em;
+    
+}
+
+.menunav a:hover{
+   border-bottom: 3px solid #dddddd;
+   padding-bottom: 3px;
+}
+ 
+.row {
+    text-align: center;
+}
+
+
+
+/*Quiero acomodar mis botones de la parte inferior*/
+.button {
+    margin-bottom: 30px;
+    text-align: center;
+    position:relative;
+    top:10%;
+    
+}
+
+.btn {
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    font-family: 'Karma-SemiBold', sans-serif;
+    font-size: 0.8em;
+    
+/*    Mayúsculas:*/
+    text-transform: uppercase; 
+}
+
+.btn-1 {
+    background-color: darkred;
+}
+
+.btn-2:hover{
+    background-color: forestgreen;
+}
+/* Quiero que el color de la letra de mis botones siga siendo blanca después de visitarlos */
+.btn-1:visited {
+  color: white;  
+}
+
+.btn-2:visited{
+    color: white;
+}
+
+/*Para el caso del botón de inicio*/
+.btn-1:link {
+  color: white;  
+}
+
+
+/*Fin de Edición de botones de la parte inferior*/
+
+
+.contenido {
+	position: relative;
+	left: 10px;
+	float:left;
+}
+
+.texto {
+	font-family: 'Karma-Light';
+    color: white;
+	font-size: 1.5em;
+	font-style: normal;
+	text-align: justify;
+	min-width:200px;
+    max-width:1080px;
+	margin: 0px 10%  5% 10%;
+	float:left;
+    
+}
+
+
+/* YO quiero que mis imágenes se vean centradas */
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cen{
+    font-family: 'Karma-Light';
+    color: white;
+	font-size: 1.5em;
+    
+}
+
+
+
+
+/* listas */ 
+
+
+
+.w3-ul {
+    font-family: 'Karma-Light';
+    color: white;
+	font-size: 1.5em;
+    float: left;
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin:10px 50%  10% 10px;
+/*    margin: auto;*/
+    text-align: center;
+    
+}
+
+.w3-ul li a:link {
+    color: white;
+}
+
+.w3-ul li a:visited {
+  color: white;  
+}
+
+.w3-green:hover {
+    background: #4CAF50;
+    
+}
+
+
+.w3-red:hover {
+    background: #F44336;
+    
+    
+}
+
+/* Listas ordenadas */
+
+
+ol {
+    font-family: 'Karma-Light';
+    color: white;
+	font-size: 1.5em;
+    float: center;
+/*    margin:10px 0px  10px 0px;*/
+/*    margin: auto;*/
+    text-align: center;
+    list-style-type: decimal;
+}
+
+
+
+
+
+/* Fin listas*/
+
+
+/* Tablas*/
+
+
+table {
+    /*Para que haya más espacio entre columnas*/
+    border-collapse: separate;
+    border-spacing: 60px 10px;
+    
+    font-family: 'Karma-Light';
+    color: white;
+	font-size: 1.5em;
+    float: center;
+    margin: auto;
+    border: 2px solid #4CAF50 ;
+}
+
+
+
+
+
+tr th{ 
+    font-family: 'Karma-Bold';   
+	font-size: 1em;
+	font-weight: normal;
+    color:yellow;
+    text-shadow: 0.2px 0.2px #OOOOOO;
+}
+
+
+
+tr td a:link{
+    color: aquamarine;   
+}
+
+
+tr td .w3-ul {
+    font-size: 1em;
+    border: 2px solid #4CAF50 ;
+
+}
+
+
+tr td ol {
+    font-size: 1em;
+}
+
+/*Este estilo se retiró del archivo html5 que generó animate*/
+ #animation_container {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+
+
+
+
+
+/* Para  la adaptación al cambio de tamaño quiero:*/
+@media only screen and (max-width: 780px) {
+
+    
+/* cambio de título*/    
+h1{
+	font-size: 3em;
+	text-align: center;
+	color:dodgerblue;
+}
+    
+    h1 a:link{
+       color:dodgerblue; 
+    } 
+    
+    h1 a:visited{
+       color:darkred;  
+    }
+    /* texto más grande*/
+.texto {
+	font-size: 2em;
+}
+}
+	
+@media only screen and (max-width: 480px) {
+
+    
+   
+.texto {
+	font-size: 2.1em;
+    
+    }
+    
+    /* título más grande y con un marco que encierra los botones*/
+h1 {
+	font-size: 5em;
+    margin 50px 150px 10px 80px ;
+    
+    border: 4px solid #FFDC00;
+}   
+    
+    h3 {
+        font-family: 'GreatVibes-Regular';
+        font-size: 3em;
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
